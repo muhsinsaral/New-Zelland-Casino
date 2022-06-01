@@ -1,0 +1,93 @@
+.header{
+  ul{
+    margin: 0 50rem;
+  }
+}
+.section1 {
+  div {
+    &:first-child {
+      padding-right: 20rem !important;
+    }
+  }
+  &-hero {
+    width: 75%;
+    transform: scale(1.35) translateX(-5rem);
+  }
+}
+.section2 {
+  .content {
+    position: relative;
+    padding-left: 8rem;
+    span:first-child {
+      padding-right: 42rem;
+    }
+    .icons {
+      button {
+        height: 6rem;
+      }
+    }
+    .flash1 {
+      position: absolute;
+      top: -10rem;
+      right: 25rem;
+      width: 300px;
+      height: 300px;
+      z-index: -1;
+      //   rgba(166 ,72,255,.7)
+      background: rgb(166, 72, 255);
+      background: radial-gradient(
+        circle,
+        rgba(166, 72, 255, 0.33657212885154064) 6%,
+        rgba(166, 72, 255, 0.20211834733893552) 28%,
+        rgba(166, 72, 255, 0.07046568627450978) 67%,
+        rgba(166, 72, 255, 0) 78%
+      );
+    }
+  }
+}
+.section4 {
+  .row {
+    padding: 2rem 3rem;
+  }
+}
+.section5{
+  .notscale.btn-gradient-border{
+    &:hover{
+      transform: scale(1) !important;
+    }
+  }
+  .accordion{
+    button{
+      pointer-events: none;
+    }
+    p{
+      transition: all 1s ease-in;
+      display: none;
+    }
+  }
+  .aside{
+    li,.bestBonusses{
+      cursor: pointer;
+      &:hover{
+        background-color: $bgCasinos;
+      }
+    }
+    .latestNews{
+      div{
+        cursor: pointer;
+        &:nth-child(even){
+          background-color: $bgCasinos;
+        }
+      }
+    }
+  }
+  
+}
+.join{
+  .col{
+    div{
+      padding-right: 4rem !important;
+      padding-left: 4rem !important;
+    }
+  }
+}

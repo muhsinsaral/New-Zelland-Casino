@@ -1,0 +1,295 @@
+html {
+  font-size: 10px;
+}
+* {
+  font-family: "Kanit", sans-serif;
+  line-height: 1.82;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $bgColor;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  // color: #fff!important;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  // color: #fff!important;
+  &:hover{
+    color: $green !important;
+  }
+}
+img {
+  max-width: 100%;
+}
+//Font Size
+.fs {
+  &-10 {
+    font-size: 1rem;
+  }
+  &-12 {
+    font-size: 1.2rem;
+  }
+  &-14 {
+    font-size: 1.4rem;
+  }
+  &-15 {
+    font-size: 1.5rem;
+  }
+  &-16 {
+    font-size: 1.6rem;
+  }
+  &-17 {
+    font-size: 1.7rem;
+  }
+  &-18 {
+    font-size: 1.8rem;
+  }
+  &-19 {
+    font-size: 1.9rem;
+  }
+  &-20 {
+    font-size: 2rem;
+  }
+  &-23 {
+    font-size: 2.3rem;
+  }
+  &-25 {
+    font-size: 2.5rem;
+  }
+  &-26 {
+    font-size: 2.6rem;
+  }
+  &-27 {
+    font-size: 2.7rem;
+  }
+  &-30 {
+    font-size: 3rem;
+  }
+  &-32 {
+    font-size: 3.2rem;
+  }
+  &-35 {
+    font-size: 3.5rem;
+  }
+  &-40 {
+    font-size: 4rem;
+  }
+  &-64 {
+    font-size: 6.4rem;
+  }
+}
+//Font Weight
+.fw {
+  &-thin {
+    font-weight: 100 !important;
+  }
+  &-light {
+    font-weight: 300 !important;
+  }
+  &-regular {
+    font-weight: 400 !important;
+  }
+  &-medium {
+    font-weight: 500 !important;
+  }
+  &-semiBold {
+    font-weight: 600 !important;
+  }
+  &-bold {
+    font-weight: 700 !important;
+  }
+  &-extra-bold {
+    font-weight: 800 !important;
+  }
+}
+
+//BTN
+//Lineer Gradient Button
+.btn-gradient {
+  /* Fallback: Set a background color. */
+  border: none;
+  background-color: red;
+
+  /* Create the gradient. */
+  background-image: -webkit-linear-gradient(45deg, $green, $purple, $orange);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: transparent;
+  -moz-text-fill-color: transparent;
+  transition: all 0.5s ease-in-out !important;
+}
+//Gradient Border
+.btn-gradient-border {
+  transition: all 0.5s ease-in-out;
+
+  background: -webkit-linear-gradient(45deg, $green, $purple, $orange);
+
+  -moz-background-origin: border;
+  background-origin: border-box;
+
+  border: 1.3px solid transparent;
+  border-radius: 3rem;
+  box-shadow: inset -999px 0 0 $bgColor; /* The background color */
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.bg-button-card {
+  box-shadow: inset -999px 0 0 $bgGradient1;
+}
+.btn-gray {
+  color: $buttongray !important;
+  &:hover {
+    background-color: $buttongray;
+    color: #000 !important;
+    .dmca {
+      filter: brightness(10%);
+    }
+    
+  }
+}
+.btn-outline-light {
+  outline: none;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+//bg color
+.bg-color {
+  background-color: $bgColor !important;
+}
+.bg-gradientt {
+  background-image: linear-gradient($bgGradient2, $bgGradient1) !important;
+}
+.bgCasinos {
+  background-color: $bgCasinos !important;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($bgCasinos, 5%) !important;
+  }
+}
+//Icon Gray
+.icon-gray {
+  color: $gray !important;
+  cursor: pointer;
+  &:hover {
+    color: #fff !important;
+    .icon {
+      filter: brightness(500%);
+    }
+  }
+}
+//Circle
+%circle {
+  height: 4rem;
+  width: 4rem;
+  background-color: aqua;
+  text-align: center;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  &-linear {
+    @extend %circle;
+    background-image: linear-gradient(45deg, $green, $purple, $orange);
+  }
+  &-primary {
+    @extend %circle;
+    background-color: lighten($bgCasinos, 15%);
+  }
+  &-secondary {
+    @extend %circle;
+    background-image: linear-gradient(
+      45deg,
+      darken($green, 50%),
+      lighten($green, 5%)
+    );
+  }
+  &-gray {
+    @extend %circle;
+    background-color: gray;
+  }
+}
+//Table Styling
+.gradient {
+  &-vertical {
+    width: 8px;
+    background-image: -webkit-linear-gradient(90deg, $green, $purple, $orange);
+  }
+  &-horizontal {
+    height: 2px;
+    background-image: -webkit-linear-gradient(360deg, $green, $purple, $orange);
+  }
+}
+.table-border {
+  height: 1px;
+}
+.table-bg{
+  
+}
+th{
+  width: 33%;
+}
+tbody{
+  position: relative;
+  
+  tr{
+    height: 6rem;
+    vertical-align: bottom;
+    &:first-child{
+      height: 8rem;
+      
+    }
+  }
+  td{
+    .table-bg{
+      position: absolute;
+      background-color: $bgCasinos;
+      top: 3rem;
+      height: 80%;
+      width: 28%;
+      margin-left: calc(31%);
+      border-radius: 8px;
+      z-index: -1;
+      
+    }
+  }
+}
+input{
+  background-color: transparent;
+  outline: none;
+  border: 1px solid gray;
+  padding: 0;
+  &::placeholder{
+    color: #fff !important;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+.social{
+  &:hover{
+    filter: hue-rotate(50deg);
+  } 
+}
+.hide{
+  display: none;
+}
